@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_borrows_view_form" model="ir.ui.view">
+        <field name="name">product_borrows.view.form</field>
+        <field name="model">product.borrows</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button string="check" name="check_data" type="object" class="oe_highlight" />
+                  
+                </header>
+                <sheet>
+                
+                    <group>
+                  
+                <field name="customers"/>
+                <field name="product_id"/>
+                <field name="price"/>
+                <field name="quantity"/>        
+                <field name="payment_done"/>             
+                    </group> 
+                    
+                    <notebook>
+                        <page name="demo_fields_liness" string="demos fields" editable="botttom">
+                            <group>
+                                <!-- <tree editable='bottom'>
+                                    <field name="product_id" />
+                                    <field name="price" />
+                                    <field name="qty" />
+                                    <field name="saledata" />
+                                    <field name="type"/>
+                                    <field name="totle"/>
+                                   
+                                </tree> -->
+
+                                <!-- <form string='demo fieldss'>
+                                    <field name="product_id" />
+                                    <field name="price"  required="1"/>
+                                    <field name="qty" required="true"/>
+                             
+                                    <field name="saledata" />
+
+                                    <field name="totle"/>
+                                    <field name="type"/>
+                                
+                                </form> -->
+                            </group>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_borrows_view_tree" model="ir.ui.view">
+        <field name="name">product_borrows.view.tree</field>
+        <field name="model">product.borrows</field>
+        <field name="arch" type="xml">
+            <tree string="">
+
+                <field name="customers"/>
+                <field name="product_id"/>
+                <field name="price"/>
+                <field name="quantity"/>
+                <field name="create_date"/>
+                <field name="payment_done"/>      
+
+            </tree>
+        </field>
+    </record>
+            
+   
+        
+
+    <record id="product_borrows_action" model="ir.actions.act_window">
+        <field name="name">Product Buy/Sale List</field>
+        <field name="res_model">product.borrows</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="context">{'dynamic_domains': True}</field> -->
+    </record>
+
+    <menuitem
+    id="product_borrows_submenus"
+    name="Productsaa"
+    sequence="10"
+    action="product_borrows_action"
+    parent="custom_borrow_products.menu_root" />
+
+</odoo>

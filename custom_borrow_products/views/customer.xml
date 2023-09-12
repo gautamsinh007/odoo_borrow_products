@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="customer_datas_view_form" model="ir.ui.view">
+        <field name="name">customer_datas.view.form</field>
+        <field name="model">customer.datas</field>
+        <field name="arch" type="xml">
+            <form string="">
+                
+                <sheet>
+                    <group>
+
+                        <field name="name" />
+                    
+
+                    </group>
+
+                    <notebook>
+                        <page name="demo_data" string="Products Add">
+                            <form string='demos fieldss'>
+                                                                
+                                <field name="productsborrows" />
+
+                            </form>
+                        </page>
+                    </notebook>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>      
+
+    <record id="customer_datas_view_tree" model="ir.ui.view">
+        <field name="name">customer_datas.view.tree</field>
+        <field name="model">customer.datas</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name"  string='Name'/>
+                <field name="productsborrows"/>
+                <field name="login_user"/>
+                <field name="create_date"/>
+                <!-- <field name="productsborrows"  string='productsborrows'/> -->
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="customer_datas_graph_view" model="ir.ui.view">
+        <field name="name">customer.datas.graph.view</field>
+        <field name="model">customer.datas</field>
+        <field name="arch" type="xml">
+                    <graph string="" type="bar" sample="1" order="desc" >
+                            <field name="productsborrows"/>
+                            <field name="name"/>
+                    </graph>
+        </field>
+    </record>
+
+    <record id="customer_datas_action" model="ir.actions.act_window">
+        <field name="name">customer datas</field>
+        <field name="res_model">customer.datas</field>
+        <field name="view_mode">tree,form,graph</field>
+          <field name="context">{'dynamict_domain': True}</field>
+    </record>
+
+
+<menuitem
+        id="customer_datas_submenus"
+        name="customer datas"
+        sequence="10"
+        action="customer_datas_action"
+        parent="custom_borrow_products.menu_root" />
+
+</odoo>
