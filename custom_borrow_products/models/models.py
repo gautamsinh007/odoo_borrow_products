@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-
+# abc
 class custom_borrow_products(models.Model):
     _name = 'custom_borrow_products.custom_borrow_products'
     _description = 'custom_borrow_products.custom_borrow_products'
