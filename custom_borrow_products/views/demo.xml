@@ -5,10 +5,7 @@
         <field name="model">product.borrows</field>
         <field name="arch" type="xml">
             <form string="">
-                <header>
-                    <button string="check" name="check_data" type="object" class="oe_highlight" />
-                  
-                </header>
+              
                 <sheet>
                 
                     <group>

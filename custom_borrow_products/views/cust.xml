@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cust_datas_view_form" model="ir.ui.view">
+        <field name="name">cust_datas.view.form</field>
+        <field name="model">cust.datas</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="cust_datas_view_tree" model="ir.ui.view">
+        <field name="name">cust_datas.view.tree</field>
+        <field name="model">cust.datas</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="create_date"/>
+                <field name="login_user"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="cust_datas_action" model="ir.actions.act_window">
+        <field name="name">Products Add</field>
+        <field name="res_model">cust.datas</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'dynamic_domain': True}</field>
+    </record>
+
+
+        
+    <menuitem
+        id="cust_datas_submenus"
+        name="cust cerate"
+        sequence="10"
+        action="cust_datas_action"
+        parent="custom_borrow_products.menu_root" />
+</odoo>

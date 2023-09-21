@@ -3,6 +3,8 @@ access_custom_borrow_products_custom_borrow_products,custom_borrow_products.cust
 access_customer.datas,customer_datas,model_customer_datas,base.group_user,1,1,1,1
 access_product.borrows,product_borrows,model_product_borrows,base.group_user,1,1,1,1
 access_products.datas,products_datas,model_products_datas,base.group_user,1,1,1,1
+access_cust.datas,cust_datas,model_cust_datas,base.group_user,1,1,1,1
+
 
 
 
